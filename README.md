@@ -10,6 +10,18 @@ The data we use is [Zachary's karate club](https://en.wikipedia.org/wiki/Zachary
 
 A conflict arose in the club which caused the club to split into several factions. Using modularity based clustering, these factions can be recovered from the graph structure alone (except for one node).
 
+## Code
+
++ `R/` contains the code necessary to produce the `graphml` representation of the karate club network,
+
++ `layers/graph.py` contains the implementation of the Graph Convolutional Layer,
+
++ `utils/sparse.py` contains helper functions for dealing with sparse matrices,
+
++ `examples/` contains two python scripts that demonstrate how Graph Convolutional Neural Networks perform in an unsupervised and semi-supervised manner, following the appendix of http://arxiv.org/abs/1609.02907.
+
+All code is in python/TensorFlow.
+
 ## Original implementation of Graph Convolutional Neural Networks
 
 For the original TensorFlow implementation (in a Keras style) see https://github.com/tkipf/gcn.
