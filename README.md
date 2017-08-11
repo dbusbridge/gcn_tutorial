@@ -14,13 +14,11 @@ A conflict arose in the club which caused the club to split into several faction
 
 + `R/` contains the code necessary to produce the `graphml` representation of the karate club network,
 
-+ `layers/graph.py` contains the implementation of the Graph Convolutional Layer,
++ `layers/graph.py` contains the TensorFlow implementation of the Graph Convolutional Layer,
 
 + `utils/sparse.py` contains helper functions for dealing with sparse matrices,
 
 + `examples/` contains two python scripts that demonstrate how Graph Convolutional Neural Networks perform in an unsupervised and semi-supervised manner, following the appendix of http://arxiv.org/abs/1609.02907.
-
-All code is in python/TensorFlow.
 
 ## Original implementation of Graph Convolutional Neural Networks
 
