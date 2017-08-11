@@ -28,7 +28,7 @@ This project is built for running on an `Anaconda` virtual environment. I will a
 
 + Clone,
 
-+ If you don't want to use the gpu version of tensorflow, edit the `environement.yml`
++ If you don't want to use the gpu version of tensorflow, edit the `environment.yml`
 
 ```
 tensorflow-gpu -> tensorflow
