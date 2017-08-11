@@ -38,4 +38,6 @@ For the original TensorFlow implementation (in a Keras style) see https://github
 
 + Kipf, T. N., & Welling, M. (2016). Variational Graph Auto-Encoders. Nipsw, (2), 1–3. http://arxiv.org/abs/1611.07308
 
++ Berg, R. van den, Kipf, T. N., & Welling, M. (2017). Graph Convolutional Matrix Completion. https://arxiv.org/pdf/1706.02263.pdf
+
 + Schlichtkrull, M., Kipf, T. N., Bloem, P., Berg, R. van den, Titov, I., & Welling, M. (2017). Modeling Relational Data with Graph Convolutional Networks, 1–12. http://arxiv.org/abs/1703.06103
