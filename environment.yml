@@ -1,0 +1,19 @@
+name: env_graph_convnet
+dependencies:
+  - python=3.6.1
+  # Analysis
+  - matplotlib
+  - seaborn
+  # Calculations
+  - nomkl
+  - numpy
+  - networkx
+  - scikit-learn
+  - scipy
+  # Reporting
+  - pandas
+  # Packages
+  - pip
+  - pip:
+    - python-igraph
+    - tensorflow-gpu

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<!-- Created by igraph -->
+  <key id="g_name" for="graph" attr.name="name" attr.type="string"/>
+  <key id="v_membership" for="node" attr.name="membership" attr.type="double"/>
+  <key id="v_color" for="node" attr.name="color" attr.type="string"/>
+  <graph id="G" edgedefault="undirected">
+    <data key="g_name">Zachary</data>
+    <node id="n0">
+      <data key="v_membership">1</data>
+      <data key="v_color">red</data>
+    </node>
+    <node id="n1">
+      <data key="v_membership">1</data>
+      <data key="v_color">red</data>
+    </node>
+    <node id="n2">
+      <data key="v_membership">1</data>
+      <data key="v_color">red</data>
+    </node>
+    <node id="n3">
+      <data key="v_membership">1</data>
+      <data key="v_color">red</data>
+    </node>
+    <node id="n4">
+      <data key="v_membership">2</data>
+      <data key="v_color">green</data>
+    </node>
+    <node id="n5">
+      <data key="v_membership">2</data>
+      <data key="v_color">green</data>
+    </node>
+    <node id="n6">
+      <data key="v_membership">2</data>
+      <data key="v_color">green</data>
+    </node>
+    <node id="n7">
+      <data key="v_membership">1</data>
+      <data key="v_color">red</data>
+    </node>
+    <node id="n8">
+      <data key="v_membership">3</data>
+      <data key="v_color">blue</data>
+    </node>
+    <node id="n9">
+      <data key="v_membership">3</data>
+      <data key="v_color">blue</data>
+    </node>
+    <node id="n10">
+      <data key="v_membership">2</data>
+      <data key="v_color">green</data>
+    </node>
+    <node id="n11">
+      <data key="v_membership">1</data>
+      <data key="v_color">red</data>
+    </node>
+    <node id="n12">
+      <data key="v_membership">1</data>
+      <data key="v_color">red</data>
+    </node>
+    <node id="n13">
+      <data key="v_membership">1</data>
+      <data key="v_color">red</data>
+    </node>
+    <node id="n14">
+      <data key="v_membership">3</data>
+      <data key="v_color">blue</data>
+    </node>
+    <node id="n15">
+      <data key="v_membership">3</data>
+      <data key="v_color">blue</data>
+    </node>
+    <node id="n16">
+      <data key="v_membership">2</data>
+      <data key="v_color">green</data>
+    </node>
+    <node id="n17">
+      <data key="v_membership">1</data>
+      <data key="v_color">red</data>
+    </node>
+    <node id="n18">
+      <data key="v_membership">3</data>
+      <data key="v_color">blue</data>
+    </node>
+    <node id="n19">
+      <data key="v_membership">1</data>
+      <data key="v_color">red</data>
+    </node>
+    <node id="n20">
+      <data key="v_membership">3</data>
+      <data key="v_color">blue</data>
+    </node>
+    <node id="n21">
+      <data key="v_membership">1</data>
+      <data key="v_color">red</data>
+    </node>
+    <node id="n22">
+      <data key="v_membership">3</data>
+      <data key="v_color">blue</data>
+    </node>
+    <node id="n23">
+      <data key="v_membership">4</data>
+      <data key="v_color">cyan</data>
+    </node>
+    <node id="n24">
+      <data key="v_membership">4</data>
+      <data key="v_color">cyan</data>
+    </node>
+    <node id="n25">
+      <data key="v_membership">4</data>
+      <data key="v_color">cyan</data>
+    </node>
+    <node id="n26">
+      <data key="v_membership">3</data>
+      <data key="v_color">blue</data>
+    </node>
+    <node id="n27">
+      <data key="v_membership">4</data>
+      <data key="v_color">cyan</data>
+    </node>
+    <node id="n28">
+      <data key="v_membership">4</data>
+      <data key="v_color">cyan</data>
+    </node>
+    <node id="n29">
+      <data key="v_membership">3</data>
+      <data key="v_color">blue</data>
+    </node>
+    <node id="n30">
+      <data key="v_membership">3</data>
+      <data key="v_color">blue</data>
+    </node>
+    <node id="n31">
+      <data key="v_membership">4</data>
+      <data key="v_color">cyan</data>
+    </node>
+    <node id="n32">
+      <data key="v_membership">3</data>
+      <data key="v_color">blue</data>
+    </node>
+    <node id="n33">
+      <data key="v_membership">3</data>
+      <data key="v_color">blue</data>
+    </node>
+    <edge source="n0" target="n1">
+    </edge>
+    <edge source="n0" target="n2">
+    </edge>
+    <edge source="n0" target="n3">
+    </edge>
+    <edge source="n0" target="n4">
+    </edge>
+    <edge source="n0" target="n5">
+    </edge>
+    <edge source="n0" target="n6">
+    </edge>
+    <edge source="n0" target="n7">
+    </edge>
+    <edge source="n0" target="n8">
+    </edge>
+    <edge source="n0" target="n10">
+    </edge>
+    <edge source="n0" target="n11">
+    </edge>
+    <edge source="n0" target="n12">
+    </edge>
+    <edge source="n0" target="n13">
+    </edge>
+    <edge source="n0" target="n17">
+    </edge>
+    <edge source="n0" target="n19">
+    </edge>
+    <edge source="n0" target="n21">
+    </edge>
+    <edge source="n0" target="n31">
+    </edge>
+    <edge source="n1" target="n2">
+    </edge>
+    <edge source="n1" target="n3">
+    </edge>
+    <edge source="n1" target="n7">
+    </edge>
+    <edge source="n1" target="n13">
+    </edge>
+    <edge source="n1" target="n17">
+    </edge>
+    <edge source="n1" target="n19">
+    </edge>
+    <edge source="n1" target="n21">
+    </edge>
+    <edge source="n1" target="n30">
+    </edge>
+    <edge source="n2" target="n3">
+    </edge>
+    <edge source="n2" target="n7">
+    </edge>
+    <edge source="n2" target="n27">
+    </edge>
+    <edge source="n2" target="n28">
+    </edge>
+    <edge source="n2" target="n32">
+    </edge>
+    <edge source="n2" target="n9">
+    </edge>
+    <edge source="n2" target="n8">
+    </edge>
+    <edge source="n2" target="n13">
+    </edge>
+    <edge source="n3" target="n7">
+    </edge>
+    <edge source="n3" target="n12">
+    </edge>
+    <edge source="n3" target="n13">
+    </edge>
+    <edge source="n4" target="n6">
+    </edge>
+    <edge source="n4" target="n10">
+    </edge>
+    <edge source="n5" target="n6">
+    </edge>
+    <edge source="n5" target="n10">
+    </edge>
+    <edge source="n5" target="n16">
+    </edge>
+    <edge source="n6" target="n16">
+    </edge>
+    <edge source="n8" target="n30">
+    </edge>
+    <edge source="n8" target="n32">
+    </edge>
+    <edge source="n8" target="n33">
+    </edge>
+    <edge source="n9" target="n33">
+    </edge>
+    <edge source="n13" target="n33">
+    </edge>
+    <edge source="n14" target="n32">
+    </edge>
+    <edge source="n14" target="n33">
+    </edge>
+    <edge source="n15" target="n32">
+    </edge>
+    <edge source="n15" target="n33">
+    </edge>
+    <edge source="n18" target="n32">
+    </edge>
+    <edge source="n18" target="n33">
+    </edge>
+    <edge source="n19" target="n33">
+    </edge>
+    <edge source="n20" target="n32">
+    </edge>
+    <edge source="n20" target="n33">
+    </edge>
+    <edge source="n22" target="n32">
+    </edge>
+    <edge source="n22" target="n33">
+    </edge>
+    <edge source="n23" target="n25">
+    </edge>
+    <edge source="n23" target="n27">
+    </edge>
+    <edge source="n23" target="n32">
+    </edge>
+    <edge source="n23" target="n33">
+    </edge>
+    <edge source="n23" target="n29">
+    </edge>
+    <edge source="n24" target="n25">
+    </edge>
+    <edge source="n24" target="n27">
+    </edge>
+    <edge source="n24" target="n31">
+    </edge>
+    <edge source="n25" target="n31">
+    </edge>
+    <edge source="n26" target="n29">
+    </edge>
+    <edge source="n26" target="n33">
+    </edge>
+    <edge source="n27" target="n33">
+    </edge>
+    <edge source="n28" target="n31">
+    </edge>
+    <edge source="n28" target="n33">
+    </edge>
+    <edge source="n29" target="n32">
+    </edge>
+    <edge source="n29" target="n33">
+    </edge>
+    <edge source="n30" target="n32">
+    </edge>
+    <edge source="n30" target="n33">
+    </edge>
+    <edge source="n31" target="n32">
+    </edge>
+    <edge source="n31" target="n33">
+    </edge>
+    <edge source="n32" target="n33">
+    </edge>
+  </graph>
+</graphml>
