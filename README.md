@@ -20,6 +20,28 @@ A conflict arose in the club which caused the club to split into several faction
 
 + `examples/` contains two python scripts that demonstrate how Graph Convolutional Neural Networks perform in an unsupervised and semi-supervised manner, following the appendix of http://arxiv.org/abs/1609.02907.
 
+## Requirements
+
+This project is built for running on an `Anaconda` virtual environment. I will add support for alternative setups later. 
+
+## Setup
+
++ Clone,
+
++ If you don't want to use the gpu version of tensorflow, edit the `environement.yml`
+
+```
+tensorflow-gpu -> tensorflow
+```
+
++ Create the Anaconda virtual environment `env_graph_convnet`
+
+```
+$ conda env create
+```
+
+And you're ready to go!
+
 ## Original implementation of Graph Convolutional Neural Networks
 
 For the original TensorFlow implementation (in a Keras style) see https://github.com/tkipf/gcn.
