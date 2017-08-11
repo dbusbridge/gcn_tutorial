@@ -1,9 +1,26 @@
-# gcn_tutorial
-A tutorial on Graph Convolutional Neural Networks
+# A tutorial on Graph Convolutional Neural Networks
 
-For the original implementation see https://github.com/tkipf/gcn
+## Data
 
-# Useful references
+The data we use is [Zachary's karate club](https://en.wikipedia.org/wiki/Zachary%27s_karate_club), a standard toy social network. It is a data set consisting of: 
+
++ 34 nodes, each corresponding to members of a karate club
+
++ 78 pairwise links that correspond to social interactions of the members outside of the club.
+
+A conflict arose in the club which caused the club to split into several factions. Using modularity based clustering, these factions can be recovered from the graph structure alone (except for one node).
+
+## Original implementation of Graph Convolutional Neural Networks
+
+For the original TensorFlow implementation (in a Keras style) see https://github.com/tkipf/gcn.
+
+## References
+
+### Blog posts
+
++ Great introductory post https://tkipf.github.io/graph-convolutional-networks/
+
+### Papers
 
 + Defferrard, M., Bresson, X., & Vandergheynst, P. (2016). Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering. Nips, (Nips), 1–14. http://arxiv.org/abs/1606.09375
 
