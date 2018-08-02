@@ -88,7 +88,7 @@ o_fc3 = lg.GraphConvLayer(input_dim=l_sizes[1],
 o_fc4 = lg.GraphConvLayer(input_dim=l_sizes[2],
                           output_dim=l_sizes[3],
                           name='fc4',
-                          act=tf.nn.softmax)(adj_norm=ph['adj_norm'], x=o_fc3)
+                          act=tf.nn.identity)(adj_norm=ph['adj_norm'], x=o_fc3)
 
 
 def masked_softmax_cross_entropy(preds, labels, mask):
