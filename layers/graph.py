@@ -14,7 +14,7 @@ class GraphConvLayer:
             input_dim,
             output_dim,
             activation=None,
-            bias=False,
+            use_bias=False,
             name="graph_conv"):
         """Initialise a Graph Convolution layer.
 
@@ -24,13 +24,13 @@ class GraphConvLayer:
                 units.
             activation (callable): The activation function to use. Defaults to
                 no activation function.
-            bias (bool): Whether to use bias or not. Defaults to `False`.
+            use_bias (bool): Whether to use bias or not. Defaults to `False`.
             name (str): The name of the layer. Defaults to `graph_conv`.
         """
         self.input_dim = input_dim
         self.output_dim = output_dim
         self.activation = activation
-        self.bias = bias
+        self.use_bias = use_bias
         self.name = name
 
         with tf.variable_scope(self.name):
@@ -39,7 +39,7 @@ class GraphConvLayer:
                 shape=(self.input_dim, self.output_dim),
                 initializer=tf.initializers.glorot_uniform())
 
-            if self.bias:
+            if self.use_bias:
                 self.b = tf.get_variable(
                     name='b',
                     initializer=tf.constant(0.1, shape=(self.output_dim,)))
@@ -48,8 +48,8 @@ class GraphConvLayer:
         x = matmul(x=x, y=self.w, sparse=sparse)  # XW
         x = matmul(x=adj_norm, y=x, sparse=True)  # AXW
 
-        if self.bias:
-            x = tf.add(x, self.bias)              # AXW + B
+        if self.use_bias:
+            x = tf.add(x, self.use_bias)              # AXW + B
 
         if self.activation is not None:
             x = self.activation(x)                # activation(AXW + B)
