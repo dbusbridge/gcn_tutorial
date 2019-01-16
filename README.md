@@ -28,10 +28,10 @@ This project is built for running on an `Anaconda` virtual environment. I will a
 
 + Clone,
 
-+ If you don't want to use the gpu version of tensorflow, edit the `environment.yml`
++ If you want to use the gpu version of tensorflow, edit the `environment.yml`
 
 ```
-tensorflow-gpu -> tensorflow
+tensorflow -> tensorflow-gpu
 ```
 
 + Create the Anaconda virtual environment `env_graph_convnet`
