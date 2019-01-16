@@ -49,7 +49,7 @@ class GraphConvLayer:
         x = matmul(x=adj_norm, y=x, sparse=True)  # AXW
 
         if self.use_bias:
-            x = tf.add(x, self.use_bias)              # AXW + B
+            x = tf.add(x, self.use_bias)          # AXW + B
 
         if self.activation is not None:
             x = self.activation(x)                # activation(AXW + B)
