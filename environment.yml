@@ -16,4 +16,4 @@ dependencies:
   - pip
   - pip:
     - python-igraph
-    - tensorflow-gpu
+    - tensorflow

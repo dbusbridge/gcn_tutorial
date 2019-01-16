@@ -39,21 +39,23 @@ ph = {
 
 l_sizes = [4, 4, 2]
 
-o_fc1 = lg.GraphConvLayer(input_dim=feat_x.shape[-1],
-                          output_dim=l_sizes[0],
-                          name='fc1',
-                          act=tf.nn.tanh)(adj_norm=ph['adj_norm'],
-                                          x=ph['x'], sparse=True)
+o_fc1 = lg.GraphConvLayer(
+    input_dim=feat_x.shape[-1],
+    output_dim=l_sizes[0],
+    name='fc1',
+    activation=tf.nn.tanh)(adj_norm=ph['adj_norm'], x=ph['x'], sparse=True)
 
-o_fc2 = lg.GraphConvLayer(input_dim=l_sizes[0],
-                          output_dim=l_sizes[1],
-                          name='fc2',
-                          act=tf.nn.tanh)(adj_norm=ph['adj_norm'], x=o_fc1)
+o_fc2 = lg.GraphConvLayer(
+    input_dim=l_sizes[0],
+    output_dim=l_sizes[1],
+    name='fc2',
+    activation=tf.nn.tanh)(adj_norm=ph['adj_norm'], x=o_fc1)
 
-o_fc3 = lg.GraphConvLayer(input_dim=l_sizes[1],
-                          output_dim=l_sizes[2],
-                          name='fc3',
-                          act=tf.nn.tanh)(adj_norm=ph['adj_norm'], x=o_fc2)
+o_fc3 = lg.GraphConvLayer(
+    input_dim=l_sizes[1],
+    output_dim=l_sizes[2],
+    name='fc3',
+    activation=tf.nn.tanh)(adj_norm=ph['adj_norm'], x=o_fc2)
 
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
@@ -86,3 +88,5 @@ for i, ax in enumerate(axes.flat):
         node_color=np.log(
             list(nx.get_node_attributes(g, 'membership').values())),
         pos=pos, ax=ax)
+
+plt.show()

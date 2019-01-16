@@ -1,41 +1,60 @@
 import tensorflow as tf
 
 
-def _dot(x, y, sparse=False):
+def matmul(x, y, sparse=False):
+    """Wrapper for sparse matrix multiplication."""
     if sparse:
         return tf.sparse_tensor_dense_matmul(x, y)
     return tf.matmul(x, y)
 
 
 class GraphConvLayer:
-    def __init__(self, input_dim, output_dim,
-                 name, act=tf.nn.relu, bias=False):
+    def __init__(
+            self,
+            input_dim,
+            output_dim,
+            activation=None,
+            bias=False,
+            name="graph_conv"):
+        """Initialise a Graph Convolution layer.
+
+        Args:
+            input_dim (int): The input dimensionality.
+            output_dim (int): The output dimensionality, i.e. the number of
+                units.
+            activation (callable): The activation function to use. Defaults to
+                no activation function.
+            bias (bool): Whether to use bias or not. Defaults to `False`.
+            name (str): The name of the layer. Defaults to `graph_conv`.
+        """
         self.input_dim = input_dim
         self.output_dim = output_dim
-        self.act = act
+        self.activation = activation
         self.bias = bias
+        self.name = name
 
-        with tf.variable_scope(name):
-            with tf.name_scope('weights'):
-                self.w = tf.get_variable(
-                    name='w',
-                    shape=(self.input_dim, self.output_dim),
-                    initializer=tf.contrib.layers.xavier_initializer())
+        with tf.variable_scope(self.name):
+            self.w = tf.get_variable(
+                name='w',
+                shape=(self.input_dim, self.output_dim),
+                initializer=tf.initializers.glorot_uniform())
 
             if self.bias:
-                with tf.name_scope('biases'):
-                    self.b = tf.get_variable(
-                        name='b',
-                        initializer=tf.constant(0.1, shape=(self.output_dim,)))
+                self.b = tf.get_variable(
+                    name='b',
+                    initializer=tf.constant(0.1, shape=(self.output_dim,)))
 
     def call(self, adj_norm, x, sparse=False):
-        hw = _dot(x=x, y=self.w, sparse=sparse)
-        ahw = _dot(x=adj_norm, y=hw, sparse=True)
+        x = matmul(x=x, y=self.w, sparse=sparse)  # XW
+        x = matmul(x=adj_norm, y=x, sparse=True)  # AXW
 
-        if not self.bias:
-            return self.act(ahw)
+        if self.bias:
+            x = tf.add(x, self.bias)              # AXW + B
 
-        return self.act(tf.add(ahw, self.bias))
+        if self.activation is not None:
+            x = self.activation(x)                # activation(AXW + B)
+
+        return x
 
     def __call__(self, *args, **kwargs):
         return self.call(*args, **kwargs)

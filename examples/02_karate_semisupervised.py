@@ -69,26 +69,29 @@ ph = {
 
 l_sizes = [4, 4, 2, nb_classes]
 
-o_fc1 = lg.GraphConvLayer(input_dim=feat_x.shape[-1],
-                          output_dim=l_sizes[0],
-                          name='fc1',
-                          act=tf.nn.tanh)(adj_norm=ph['adj_norm'],
-                                          x=ph['x'], sparse=True)
+o_fc1 = lg.GraphConvLayer(
+    input_dim=feat_x.shape[-1],
+    output_dim=l_sizes[0],
+    name='fc1',
+    activation=tf.nn.tanh)(adj_norm=ph['adj_norm'], x=ph['x'], sparse=True)
 
-o_fc2 = lg.GraphConvLayer(input_dim=l_sizes[0],
-                          output_dim=l_sizes[1],
-                          name='fc2',
-                          act=tf.nn.tanh)(adj_norm=ph['adj_norm'], x=o_fc1)
+o_fc2 = lg.GraphConvLayer(
+    input_dim=l_sizes[0],
+    output_dim=l_sizes[1],
+    name='fc2',
+    activation=tf.nn.tanh)(adj_norm=ph['adj_norm'], x=o_fc1)
 
-o_fc3 = lg.GraphConvLayer(input_dim=l_sizes[1],
-                          output_dim=l_sizes[2],
-                          name='fc3',
-                          act=tf.nn.tanh)(adj_norm=ph['adj_norm'], x=o_fc2)
+o_fc3 = lg.GraphConvLayer(
+    input_dim=l_sizes[1],
+    output_dim=l_sizes[2],
+    name='fc3',
+    activation=tf.nn.tanh)(adj_norm=ph['adj_norm'], x=o_fc2)
 
-o_fc4 = lg.GraphConvLayer(input_dim=l_sizes[2],
-                          output_dim=l_sizes[3],
-                          name='fc4',
-                          act=tf.identity)(adj_norm=ph['adj_norm'], x=o_fc3)
+o_fc4 = lg.GraphConvLayer(
+    input_dim=l_sizes[2],
+    output_dim=l_sizes[3],
+    name='fc4',
+    activation=tf.identity)(adj_norm=ph['adj_norm'], x=o_fc3)
 
 
 def masked_softmax_cross_entropy(preds, labels, mask):
@@ -108,6 +111,7 @@ def masked_accuracy(preds, labels, mask):
     mask /= tf.reduce_mean(mask)
     accuracy_all *= mask
     return tf.reduce_mean(accuracy_all)
+
 
 with tf.name_scope('optimizer'):
     loss = masked_softmax_cross_entropy(
@@ -184,3 +188,5 @@ for i, ax in enumerate(axes.flat):
         node_color=np.log(
             list(nx.get_node_attributes(g, 'membership').values())),
         pos=pos, ax=ax)
+
+plt.show()
